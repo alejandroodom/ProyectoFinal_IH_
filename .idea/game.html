@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="game">
+  <h1>Piedra, Papel o Tijera</h1>
+  <div id="feedback">
+    <p>Tú: <span id="userChoice"></span></p>
+    <p>Rival: <span id="computerChoice"></span></p>
+  </div>
+  <p id="result"></p>
+  <p id="score"></p>
+</div>
+<div class="menu">
+  <div class="choices">
+    <button class="choice" data-choice="piedra" onclick="makeChoice('piedra')"><i class="fa fa-hand-rock"></i></button>
+    <button class="choice" data-choice="papel" onclick="makeChoice('papel')"><i class="fa fa-hand-paper"></i></button>
+    <button class="choice" data-choice="tijera" onclick="makeChoice('tijera')"><i class="fa fa-hand-scissors"></i></button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+<script>
+  function makeChoice(choice) {
+    var buttons = document.querySelectorAll('.choice');
+    buttons.forEach(function(button) {
+      if (button.getAttribute('data-choice') !== choice) {
+        button.style.visibility = 'hidden';
+      }
+    });
+    setTimeout(function() {
+      buttons.forEach(function(button) {
+        button.style.visibility = 'visible';
+      });
+    }, 1000);
+  }
+</script>
+</body>
+</html>
+
+
