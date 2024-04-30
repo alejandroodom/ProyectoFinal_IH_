@@ -1,0 +1,1 @@
+He realizado el famoso "Piedra, Papel o Tijera" en HTML, CSS y JavaScript con DOM, instrucciones e interacciones para el usuario. El menú principal cuenta con un botón de comenzar y un mensaje de bienvenida. Al pulsarlo te dirigirá al juego y podrás comenzar a jugar!
